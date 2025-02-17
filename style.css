@@ -6,7 +6,9 @@
   Source: https://www.joshwcomeau.com/css/custom-css-reset/
 **/
 /* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 /* 2. Remove default margin */
@@ -20,34 +22,183 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 /* 5. Improve media defaults */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 /* 6. Inherit fonts for form controls */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 /* 7. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 /* 8. Improve line wrapping */
 p {
   text-wrap: pretty;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 /*
   9. Create a root stacking context
 */
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 
 /** Your CSS Below **/
+body {
+  font-family: var(--fs-base);
+  font-weight: var(--fw-regular);
+  font-size: var(--font-paragraph);
+  background-color: var(--clr-stone100);
+  color: var(--clr-stone600);
+}
+
+main {
+  width: 735px;
+  padding: 40px;
+  margin: 125px auto;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.recipe-image {
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.recipe-title {
+  font-family: var(--fs-accent);
+  font-size: 40px;
+  color: var(--clr-stone900);
+  margin-bottom: 15px;
+}
+
+.recipe-preparation-time {
+  padding: 25px;
+  margin: 30px 0;
+  border-radius: 12px;
+  background-color: var(--clr-rose50);
+}
+
+.recipe-preparation-time h3 {
+  color: var(--clr-rose800);
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.recipe-preparation-time ul {
+  padding: 0;
+  margin-left: 20px;
+}
+
+.recipe-preparation-time ul li {
+  line-height: 30px;
+  padding-left: 20px;
+}
+
+.recipe-preparation-time ul li::marker {
+  color: var(--clr-rose800);
+  margin-right: 30px;
+  font-size: 12px;
+}
+
+hr {
+  margin: 30px 0;
+  border: 1px solid var(--clr-stone150);
+}
+
+section h2 {
+  font-family: var(--fs-accent);
+  font-size: 28px;
+  font-weight: var(--fw-regular);
+  color: var(--clr-brown800);
+  margin-bottom: 15px;
+}
+
+.recipe-ingredients ul {
+  list-style-type: square;
+  padding: 0 20px;
+}
+
+.recipe-ingredients ul li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+
+.recipe-ingredients ul li::marker {
+  color: var(--clr-brown800);
+  font-size: 12px;
+}
+
+.recipe-instructions ol {
+  padding-left: 25px;
+}
+
+.recipe-instructions ol li {
+  margin-bottom: 8px;
+  padding-left: 18px;
+}
+
+.recipe-instructions ol li::marker {
+  color: var(--clr-brown800);
+  font-weight: bold;
+}
+
+.table-nutrition {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+.table-nutrition tr {
+  border-bottom: 1px solid var(--clr-stone150);
+}
+
+.table-nutrition tr:last-child {
+  border-bottom: none;
+}
+
+.table-nutrition tr td {
+  width: 50%;
+  padding: 12px 0;
+}
+
+.table-nutrition tr td:first-child {
+  padding-left: 30px;
+}
+
+.table-nutrition tr td:last-child {
+  color: var(--clr-brown800);
+}
 
 /** Attribution CSS **/
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
